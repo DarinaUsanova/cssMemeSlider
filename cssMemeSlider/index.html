@@ -8,47 +8,48 @@
   <title>Css Meme Slider</title>
 </head>
 <body>
-  <section class="container">
     <div class="slider-wrapper">
       <div class="slider">
-        <img src="img/1css.jpeg" id="slide-1" alt="Sheldon Love">
-        <img src="img/2css.jpeg" id="slide-2" alt="Sheldon Feelings">
-        <img src="img/3css.png" id="slide-3" alt="Sheldon Rules">
-        <img src="img/4css.png" id="slide-4" alt="Sheldon Gravitation">
-        <img src="img/5css.jpeg" id="slide-5" alt="Sheldon Sarcasm">
+        <img class="slide s1" src="img/1css.jpeg" id="slide-1" alt="Sheldon Love">
+        <img class="slide" src="img/2css.jpeg" id="slide-2" alt="Sheldon Feelings">
+        <img class="slide" src="img/3css.png" id="slide-3" alt="Sheldon Rules">
+        <img class="slide" src="img/4css.png" id="slide-4" alt="Sheldon Gravitation">
+        <img class="slide" src="img/5css.jpeg" id="slide-5" alt="Sheldon Sarcasm">
       </div>
       <div class="slider-nav">
-        <span class="slider-text" data-target="1">Lol</span>
-        <span class="slider-text" data-target="2">lol</span>
-        <span class="slider-text" data-target="3">lol</span>
-        <span class="slider-text" data-target="4">lol</span>
-        <span class="slider-text" data-target="5">lol</span>
+        <div class="text">
+          <span class="slider-text" data-target="1">Lol</span>
+          <span class="slider-text" data-target="2">lol</span>
+          <span class="slider-text" data-target="3">lol</span>
+          <span class="slider-text" data-target="4">lol</span>
+          <span class="slider-text" data-target="5">lol</span>
+        </div>
         <div class="pagination-wrapper">
-          <label for="slider-label" class="slider-label">
+          <label for="slide1" class="slider-label">
             <span class="slider-check">
               <span class="slider-active"></span>
             </span>
             <input type="radio" name="slider-radio" id="slide1" class="slider-input" data-path="one" checked>
           </label>
-          <label for="slider-label" class="slider-label">
+          <label for="slide2" class="slider-label">
             <span class="slider-check">
               <span class="slider-active"></span>
             </span>
             <input type="radio" name="slider-radio" id="slide2" class="slider-input" data-path="two">
           </label>
-          <label for="slider-label" class="slider-label">
+          <label for="slide3" class="slider-label">
             <span class="slider-check">
               <span class="slider-active"></span>
             </span>
             <input type="radio" name="slider-radio" id="slide3" class="slider-input" data-path="three">
           </label>
-          <label for="slider-label" class="slider-label">
+          <label for="slide4" class="slider-label">
             <span class="slider-check">
               <span class="slider-active"></span>
             </span>
             <input type="radio" name="slider-radio" id="slide4" class="slider-input" data-path="four">
           </label>
-          <label for="slider-label" class="slider-label">
+          <label for="slide5" class="slider-label">
             <span class="slider-check">
               <span class="slider-active"></span>
             </span>
@@ -57,6 +58,5 @@
         </div>
       </div>
     </div>
-  </section>
 </body>
 </html>

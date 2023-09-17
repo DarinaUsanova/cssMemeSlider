@@ -18,7 +18,7 @@ img{
   max-width: 100%;
 }
 .container {
-  margin: 0;
+  
 }
 
 .slider-wrapper {
@@ -38,6 +38,7 @@ img{
   margin-bottom: 1rem;
   transition: transform ease-in-out .5s;
   gap: 1rem;
+  overflow: hidden;
 }
 
 .slider img {
@@ -50,11 +51,20 @@ img{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
-
+.text{
+  display: flex;
+  width: 500%;
+  transition: ease-in-out .3s;
+  overflow: hidden;
+}
+.slider-text{
+  width: 100%;
+}
 .pagination-wrapper {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: right;
 }
 .slider-label{
@@ -69,7 +79,7 @@ img{
   width: 2rem;
   height: 2rem;
   background-color: transparent;
-  border: #361062 1px solid;
+  border: pink 1px solid;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -79,36 +89,20 @@ img{
   transition: opacity .3s ease-out;
 }
 .slider-label .slider-check{
-  background-color: transparent;
+  background-color: black;
 }
-.slider-label:hover .slider-check {
-  background-color: aqua;
-}
-.slider-label:active .slider-check {
-  background-color: pink;
-}
-
-#img-1:checked ~ #slide-1 {
+#slide1:checked ~ .s1 {
   margin-left: 0;
 }
-
-#img-2:checked ~ #slide-2 {
+#slide2:checked ~ .s1 {
+  margin-left: -25%;
+}
+#slide3:checked ~ .s1 {
+  margin-left: -50%;
+}
+#slide4:checked ~ .s1 {
+  margin-left: -75%;
+}
+#slide5:checked ~ .s1 {
   margin-left: -100%;
-}
-
-#img-3:checked ~ #slide-3 {
-  margin-left: -200%;
-}
-
-#img-4:checked ~ #slide-4 {
-  margin-left: -300%;
-}
-
-#img-5:checked ~ #slide-5 {
-  margin-left: -400%;
-}
-
-.active {
-  background-color: #BB945F;
-  cursor: pointer;
 }
