@@ -1,52 +1,114 @@
-*{
+* {
   box-sizing: border-box;
 }
-body{
+
+body {
+  height: 100vh;
   background: no-repeat url(img/background.jpeg);
   background-size: cover;
-}
-.container{
-  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
 }
-.slider-wrapper{
+input{
+  display: none;
+}
+img{
+  max-width: 100%;
+}
+.container {
+  margin: 0;
+}
+
+.slider-wrapper {
   position: static;
   max-width: 48rem;
   margin: 0 auto;
+  padding: 1rem;
 }
-.slider{
+
+.slider {
   display: flex;
   aspect-ratio: 16/9;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  box-shadow: 0 1,5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
   border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  transition: transform ease-in-out .5s;
+  gap: 1rem;
 }
-.slider img{
+
+.slider img {
   flex: 1 0 100%;
   scroll-snap-align: start;
   object-fit: cover;
 }
-.pagination-wrapper{
+
+.slider-nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pagination-wrapper {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: right;
 }
-.pagination__box{
-  width: 26px;
-  height: 26px;
-  padding: 5px;
+.slider-label{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
   cursor: pointer;
 }
-.pagination__btn{
-  width: 16px;
-  height: 16px;
-  background-color: #0C0C0E;
+.slider-check{
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: #361062 1px solid;
   border-radius: 50%;
   border: none;
   cursor: pointer;
 }
-.active{
+.slider-active{
+  opacity: 0;
+  transition: opacity .3s ease-out;
+}
+.slider-label .slider-check{
+  background-color: transparent;
+}
+.slider-label:hover .slider-check {
+  background-color: aqua;
+}
+.slider-label:active .slider-check {
+  background-color: pink;
+}
+
+#img-1:checked ~ #slide-1 {
+  margin-left: 0;
+}
+
+#img-2:checked ~ #slide-2 {
+  margin-left: -100%;
+}
+
+#img-3:checked ~ #slide-3 {
+  margin-left: -200%;
+}
+
+#img-4:checked ~ #slide-4 {
+  margin-left: -300%;
+}
+
+#img-5:checked ~ #slide-5 {
+  margin-left: -400%;
+}
+
+.active {
   background-color: #BB945F;
   cursor: pointer;
 }
