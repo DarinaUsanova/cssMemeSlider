@@ -10,51 +10,47 @@
 <body>
     <div class="slider-wrapper">
       <div class="slider">
-        <img class="slide s1" src="img/1css.jpeg" id="slide-1" alt="Sheldon Love">
-        <img class="slide" src="img/2css.jpeg" id="slide-2" alt="Sheldon Feelings">
-        <img class="slide" src="img/3css.png" id="slide-3" alt="Sheldon Rules">
-        <img class="slide" src="img/4css.png" id="slide-4" alt="Sheldon Gravitation">
-        <img class="slide" src="img/5css.jpeg" id="slide-5" alt="Sheldon Sarcasm">
-      </div>
-      <div class="slider-nav">
-        <div class="text">
-          <span class="slider-text" data-target="1">Lol</span>
-          <span class="slider-text" data-target="2">lol</span>
-          <span class="slider-text" data-target="3">lol</span>
-          <span class="slider-text" data-target="4">lol</span>
-          <span class="slider-text" data-target="5">lol</span>
+        <input type="radio" name="radio-btn" id="slide-1" checked>
+        <input type="radio" name="radio-btn" id="slide-2">
+        <input type="radio" name="radio-btn" id="slide-3">
+        <input type="radio" name="radio-btn" id="slide-4">
+        <input type="radio" name="radio-btn" id="slide-5">
+        <div class="images-wrapper">
+          <div class="images">
+            <div class="slider-item s1"><img src="img/1css.jpeg" alt="Sheldon Love"></div>
+            <div class="slider-item"><img src="img/2css.jpeg" alt="Sheldon Feelings"></div>
+            <div class="slider-item"><img src="img/3css.png" alt="Sheldon Rules"></div>
+            <div class="slider-item"><img src="img/4css.png" alt="Sheldon Gravitation"></div>
+            <div class="slider-item"><img src="img/5css.jpeg" alt="Sheldon Sarcasm"></div>
+          </div>
         </div>
-        <div class="pagination-wrapper">
-          <label for="slide1" class="slider-label">
-            <span class="slider-check">
-              <span class="slider-active"></span>
-            </span>
-            <input type="radio" name="slider-radio" id="slide1" class="slider-input" data-path="one" checked>
-          </label>
-          <label for="slide2" class="slider-label">
-            <span class="slider-check">
-              <span class="slider-active"></span>
-            </span>
-            <input type="radio" name="slider-radio" id="slide2" class="slider-input" data-path="two">
-          </label>
-          <label for="slide3" class="slider-label">
-            <span class="slider-check">
-              <span class="slider-active"></span>
-            </span>
-            <input type="radio" name="slider-radio" id="slide3" class="slider-input" data-path="three">
-          </label>
-          <label for="slide4" class="slider-label">
-            <span class="slider-check">
-              <span class="slider-active"></span>
-            </span>
-            <input type="radio" name="slider-radio" id="slide4" class="slider-input" data-path="four">
-          </label>
-          <label for="slide5" class="slider-label">
-            <span class="slider-check">
-              <span class="slider-active"></span>
-            </span>
-            <input type="radio" name="slider-radio" id="slide5" class="slider-input" data-path="five">
-          </label>
+        <div class="slider-nav">
+          <div class="text">
+            <div class="text-wrap">
+            <span class="slider-text">Lol</span>
+            <span class="slider-text">lol</span>
+            <span class="slider-text">lol</span>
+            <span class="slider-text">lol</span>
+            <span class="slider-text">lol</span>
+          </div>
+        </div>
+          <div class="buttons-wrapper">
+            <label for="slide-1" class="btn one">
+              <span class="slider-check"></span>
+            </label>
+            <label for="slide-2" class="btn two">
+              <span class="slider-check"></span>
+            </label>
+            <label for="slide-3" class="btn three">
+              <span class="slider-check"></span>
+            </label>
+            <label for="slide-4" class="btn four">
+              <span class="slider-check"></span>
+            </label>
+            <label for="slide-5" class="btn five">
+              <span class="slider-check"></span>
+            </label>
+          </div>
         </div>
       </div>
     </div>

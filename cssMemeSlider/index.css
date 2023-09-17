@@ -1,108 +1,218 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  height: 100vh;
-  background: no-repeat url(img/background.jpeg);
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
 input{
   display: none;
 }
-img{
-  max-width: 100%;
+body {
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+  margin: 0;
 }
-.container {
-  
-}
-
-.slider-wrapper {
-  position: static;
-  max-width: 48rem;
-  margin: 0 auto;
-  padding: 1rem;
-}
-
-.slider {
-  display: flex;
-  aspect-ratio: 16/9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  border-radius: 0.5rem;
-  margin-bottom: 1rem;
-  transition: transform ease-in-out .5s;
-  gap: 1rem;
-  overflow: hidden;
-}
-
-.slider img {
-  flex: 1 0 100%;
-  scroll-snap-align: start;
-  object-fit: cover;
-}
-
-.slider-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  overflow: hidden;
-}
-.text{
-  display: flex;
-  width: 500%;
-  transition: ease-in-out .3s;
-  overflow: hidden;
-}
-.slider-text{
+img {
+  display: block;
   width: 100%;
 }
-.pagination-wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: right;
+span {
+  width: 100%;
+  min-width: 100%;
+  margin-bottom: 0;
+  color: black;
+  font-size: 3vh;
+  text-align: left;
 }
-.slider-label{
+.slider-wrapper {
+  min-height: 100vh;
+  min-width: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 4vh;
+  max-width: 50rem;
+  width: 50vw;
+  background-color: transparent;
+  margin: 0 auto;
+  align-items: center;
+}
+.buttons-wrapper{
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 3rem;
-  height: 3rem;
+  text-align: center;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: auto;
   cursor: pointer;
 }
-.slider-check{
-  width: 2rem;
-  height: 2rem;
-  background-color: transparent;
-  border: pink 1px solid;
+.slider label:hover span {
+  background-color: white;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
+  box-sizing: border-box;
+}
+.images-wrapper{
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.images{
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  transition: transform 0.3s ease-in-out;
+}
+.slider-item{
+  transition: all .6s ease;
+  min-width: 100%;
+}
+
+.slider-item img{
+  min-width: 100%;
+  height: 32rem;
+  border-radius: 1vh;
+}
+.buttons-wrapper label {
+  padding: 0.3rem 0.9rem 0.9rem 0.9rem;
+}
+.buttons-wrapper label span {
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 20;
+  width: 2vh;
+  height: 2vh;
+  border: 2px solid;
+  border-color: rgb(49, 82, 157);
+  background: rgb(49, 82, 157);
   border-radius: 50%;
-  border: none;
+  text-align: center;
   cursor: pointer;
 }
-.slider-active{
-  opacity: 0;
-  transition: opacity .3s ease-out;
+.slider-nav {
+  height: 10rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  max-width: 100%;
 }
-.slider-label .slider-check{
-  background-color: black;
+.text {
+  width: 65%;
+  overflow: hidden;
 }
-#slide1:checked ~ .s1 {
-  margin-left: 0;
+.text-wrap {
+  display: flex;
+  flex-direction: row;
+  transition: all 1s ease-in-out;
 }
-#slide2:checked ~ .s1 {
-  margin-left: -25%;
+.slider-text {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  z-index: 5;
 }
-#slide3:checked ~ .s1 {
-  margin-left: -50%;
+.slider #slide-1:checked~.slider-nav .buttons-wrapper .btn.one span{
+  border-color: rgb(49, 82, 157);
+  background: transparent;
+}  
+.slider #slide-2:checked~.slider-nav .buttons-wrapper .btn.two span{
+  border-color: rgb(49, 82, 157);
+  background: transparent;
+}  
+.slider #slide-3:checked~.slider-nav .buttons-wrapper .btn.three span{
+  border-color: rgb(49, 82, 157);
+  background: transparent;
+}  
+.slider #slide-4:checked~.slider-nav .buttons-wrapper .btn.four span{
+  border-color: rgb(49, 82, 157);
+  background: transparent;
+}  
+.slider #slide-5:checked~.slider-nav .buttons-wrapper .btn.five span{
+  border-color: rgb(49, 82, 157);
+  background: transparent;
+}  
+.slider #slide-1:checked:hover~.slider-nav .buttons-wrapper .btn.one span {
+  box-sizing: border-box;
+  background-color:  transparent;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
 }
-#slide4:checked ~ .s1 {
-  margin-left: -75%;
+.slider #slide-2:checked:hover~.slider-nav .buttons-wrapper .btn.two span {
+  box-sizing: border-box;
+  background-color:  transparent;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
 }
-#slide5:checked ~ .s1 {
+.slider #slide-3:checked:hover~.slider-nav .buttons-wrapper .btn.three span {
+  box-sizing: border-box;
+  background-color:  transparent;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
+}
+.slider #slide-4:checked:hover~.slider-nav .buttons-wrapper .btn.four span {
+  box-sizing: border-box;
+  background-color:  transparent;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
+}
+.slider #slide-5:checked:hover~.slider-nav .buttons-wrapper .btn.five span {
+  box-sizing: border-box;
+  background-color:  transparent;
+  border-color: #dfdfdf;
+  transition: all .4s ease;
+}
+.slider #slide-1:checked~.images-wrapper .images .s1{
+  margin-left: 0%;
+}
+
+.slider #slide-2:checked~.images-wrapper .images .s1{
   margin-left: -100%;
+}
+.slider #slide-3:checked~.images-wrapper .images .s1{
+  margin-left: -200%;
+}
+.slider #slide-4:checked~.images-wrapper .images .s1{
+  margin-left: -300%;
+}
+.slider #slide-5:checked~.images-wrapper .images .s1{
+  margin-left: -400%;
+}
+
+.slider #slide-1:checked ~ .slider-nav .text .text_wrap {
+  transform: translateX(0);
+}
+
+.slider #slide-2:checked ~ .slider-nav .text .text-wrap {
+  transform: translateX(-100%);
+}
+.slider #slide-3:checked ~ .slider-nav .text .text-wrap{
+  transform: translateX(-200%);
+}
+.slider #slide-4:checked ~ .slider-nav .text .text-wrap{
+  transform: translateX(-300%);
+}
+.slider #slide-5:checked ~ .slider-nav .text .text-wrap{
+  transform: translateX(-400%);
+}
+/* мобильная версия от 500px до 420px */
+@media screen and (max-width: 420px) {
+  .slider-nav{
+      max-height: 100%;
+  }
+
+  .text {
+      width: 100%;
+  }
 }
